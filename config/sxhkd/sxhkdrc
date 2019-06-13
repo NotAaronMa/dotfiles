@@ -2,12 +2,12 @@
 alt + F1
 	rofi -show run
 control + alt + t
-	xst
+	urxvt
 #decrease window gaps
 super + minus
 	~/.config/sxhkd/gaps.sh 10
 super + equal
-    ~/.config/sxhkd/gaps.sh -10
+    	~/.config/sxhkd/gaps.sh -10
 #move windows
 super + {h,j,k,l}
     dir={west,south,north,east}; \
