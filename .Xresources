@@ -1,0 +1,49 @@
+!settings
+st.termname: st
+st.shell: /bin/bash
+st.cursorshape: 6
+st.opacity: 190
+st.font:  mono:pixelsize=13:antialias=true:autohint=true;
+st.borderpx: 1
+st.cwscale: 1.0
+st.chscale: 1.1
+st.imstlye: overthespot
+!colors
+
+! special
+st.foreground:   #9ef5b0
+st.background:   #000000
+st.cursorColor:  #9ef5b0
+
+! black
+st.color0:       #151515
+st.color8:       #505050
+
+! red
+st.color1:       #fb9fb1
+st.color9:       #fb9fb1
+
+! green
+st.color2:       #5ef550
+st.color10:      #5ef550
+
+! yellow
+st.color3:       #ddb26f
+st.color11:      #ddb26f
+
+! blue
+st.color4:       #6fc2ef
+st.color12:      #6fc2ef
+
+! magenta
+st.color5:       #e1a3ee
+st.color13:      #e1a3ee
+
+! cyan
+st.color6:       #12cfc0
+st.color14:      #12cfc0
+
+! white
+st.color7:       #d0d0d0
+st.color15:      #f5f5f5
+

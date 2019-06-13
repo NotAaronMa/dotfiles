@@ -1,10 +1,8 @@
 #program hotkeys
 alt + F1
 	rofi -show run
-control + alt + f
-	termite --exec=ranger
 control + alt + t
-	termite
+	xst
 #decrease window gaps
 super + minus
 	~/.config/sxhkd/gaps.sh 10
