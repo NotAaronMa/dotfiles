@@ -9,19 +9,17 @@ ksuperkey &
 xcompmgr &
 feh --bg-center ~/Pictures/wallpapers/bg2.jpg &
 #panel bullshit
-#xfce4-power-manager &
-#pasystray &
-#nm-applet &
-#xfce4-panel &
-#pcmanfm -d &
+xfce4-power-manager &
+pasystray &
+nm-applet &
+pcmanfm -d &
+~/.config/polybar/launch.sh &
 #tint2 &
 
 
 #create desktops
 bspc monitor -d 1 2 3 q w e
 #gaps and borders
-#bspc monitor -g 1920x1050+0+30
-#bspc monitor -g 1920x1050+0+30
 bspc config border_width         2
 bspc config window_gap          0
 #tiling bullshit
