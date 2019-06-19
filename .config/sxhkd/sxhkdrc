@@ -41,8 +41,8 @@ super + shift + {1,2,3,q,w,e}
     bspc node -d "focused:^{1,2,3,4,5,6}"
 #sound bullshit
 XF86AudioMute
-	amixer set Master toggle
+	amixer -c 1 set Master toggle
 XF86AudioLowerVolume 
-	amixer set Master 10%-
+	amixer -c 1 set Master 10%-
 XF86AudioRaiseVolume
-	amixer set Master 10%+
+	amixer -c 1 set Master 10%+
