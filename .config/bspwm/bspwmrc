@@ -5,33 +5,31 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 sxhkd &
 #background programs
 ksuperkey &
-#appearance
-xcompmgr &
-feh --bg-center ~/Pictures/wallpapers/bg2.jpg &
 #panel bullshit
-xfce4-power-manager &
-pasystray &
-nm-applet &
-pcmanfm -d &
 ~/.config/polybar/launch.sh &
-#tint2 &
+#appearance
+xccompmgr &
+feh --bg-center ~/Pictures/wallpapers/bg.png &
+
 
 
 #create desktops
 bspc monitor -d 1 2 3 q w e
 #gaps and borders
-bspc config border_width         2
-bspc config window_gap          0
+bspc config border_width          2
+bspc config window_gap            10
 #tiling bullshit
-bspc config split_ratio          0.52
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
+bspc config split_ratio           0.52
+bspc config borderless_monocle    true
+bspc config gapless_monocle       true
 #general config
 bspc config focus_follows_pointer true
-
+bspc config focused_border_color '#9ef5b0'
 #window rules
 #bspc rule -a xfce4-panel -a layer='below'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a Steam state=floating
+
+
