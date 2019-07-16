@@ -2,14 +2,7 @@
 
 #compton &
 export _JAVA_AWT_WM_NONREPARENTING=1
-sxhkd &
-#background programs
-ksuperkey &
-#panel bullshit
-~/.config/polybar/launch.sh &
-#appearance
-xccompmgr &
-feh --bg-center ~/Pictures/wallpapers/bg.png &
+~/.config/bspwm/autostart.sh
 
 
 

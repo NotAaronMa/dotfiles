@@ -54,7 +54,7 @@ tray-position = right
 tray-padding = 2
 modules-left = bspwm i3
 modules-center = mpd
-modules-right = pulseaudio memory cpu temperature wlan date bat
+modules-right = pulseaudio temperature memory cpu bat wlan date
 
 
 ;tray-background = #0063ff
@@ -333,37 +333,14 @@ format =<label>%
 
 [module/temperature]
 type = internal/temperature
-thermal-zone = 0
+thermal-zone = 2
 warn-temperature = 60
-
-format = <ramp> <label>
+format = <label>
+format-prefix = "TEMP:"
+format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f50a4d
-format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
-
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label-warn-foreground = ${colors.foreground-alt}
  
-ramp-foreground = ${colors.foreground-alt}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-f
-
-
-
