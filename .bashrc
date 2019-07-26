@@ -8,6 +8,8 @@
 export EDITOR="vim"
 export MYVIMRC="~/.config/vim/vimrc"
 export VIMINIT='source $MYVIMRC'
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CONFIG="$HOME/.config"
 # new alert text
 ALERT=${BWhite}${On_Red} # Bold White on red background
 
