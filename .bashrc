@@ -4,16 +4,15 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-
-
+#set environment vars
+export EDITOR="vim"
+export MYVIMRC="~/.config/vim/vimrc"
+export VIMINIT='source $MYVIMRC'
 # new alert text
 ALERT=${BWhite}${On_Red} # Bold White on red background
 
-# memes
-alias isdavidgay="echo yes"
-alias isalangay="echo yes"
-alias b="echo 🅱️ "
-# actual functions
+
+
 alias dlmp3="youtube-dl --extract-audio --audio-format mp3"
 alias ..="cd .."
 alias cd..="cd .."
@@ -21,69 +20,11 @@ alias ls="ls -CF --color=auto"
 alias ll="ls -lisa --color=auto"
 alias grep="grep --color=auto"
 alias wget="wget -c"
-alias cpufreq="cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor"
-#environment vars 
-
-
+alias lspkg="comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)"
 alias arpscan='sudo arp-scan --interface=wlp3s0 --localnet'
-# Creates an archive (*.tar.gz) from given directory.
-function maketar() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
 
-# Create a ZIP archive of a file or folder.
-function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 
-function extract {
- if [ -z "$1" ]; then
-    # display usage if no parameters given
-    echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
- else
-    if [ -f $1 ] ; then
-        # NAME=${1%.*}
-        # mkdir $NAME && cd $NAME
-        case $1 in
-          *.tar.bz2)   tar xvjf ../$1    ;;
-          *.tar.gz)    tar xvzf ../$1    ;;
-          *.tar.xz)    tar xvJf ../$1    ;;
-          *.lzma)      unlzma ../$1      ;;
-          *.bz2)       bunzip2 ../$1     ;;
-          *.rar)       unrar x -ad ../$1 ;;
-          *.gz)        gunzip ../$1      ;;
-          *.tar)       tar xvf ../$1     ;;
-          *.tbz2)      tar xvjf ../$1    ;;
-          *.tgz)       tar xvzf ../$1    ;;
-          *.zip)       unzip ../$1       ;;
-          *.Z)         uncompress ../$1  ;;
-          *.7z)        7z x ../$1        ;;
-          *.xz)        unxz ../$1        ;;
-          *.exe)       cabextract ../$1  ;;
-          *)           echo "extract: '$1' - unknown archive method" ;;
-        esac
-    else
-        echo "$1 - file does not exist"
-    fi
-fi
-}
-
-# jump directorys upwards until it hits a directory with multiple folders
-up(){
-  local d=""
-  limit=$1
-  for ((i=1 ; i <= limit ; i++))
-    do
-      d=$d/..
-    done
-  d=$(echo $d | sed 's/^\///')
-  if [ -z "$d" ]; then
-    d=..
-  fi
-  cd $d
-}
-
-# create an directory and directly cd into it
-mcd () {
-  mkdir -p $1
-  cd $1
-}
+#------------- Colors and shit --------------
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
@@ -94,3 +35,27 @@ export PS1="\[\033[38;5;12m\][\[$(tput sgr0)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\
 [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
 [ -e "$DIR_COLORS" ] || DIR_COLORS=""
 eval "`dircolors -b $DIR_COLORS`"
+
+#tty colors
+if [ "$TERM" = "linux" ]; then
+  /bin/echo -e "
+  \e]P0151515
+  \e]P1fb9fb1
+  \e]P25ef550
+  \e]P3ddb26f
+  \e]P46fc2ef
+  \e]P5e1a3ee
+  \e]P612cfc0
+  \e]P7d0d0d0
+  \e]P8505050
+  \e]P9fb9fb1
+  \e]PA5ef550
+  \e]PBddb26f
+  \e]PC6fc2ef
+  \e]PDe1a3ee
+  \e]PE12cfc0
+  \e]PFf5f5f5
+  "
+  # get rid of artifacts
+  clear
+fi

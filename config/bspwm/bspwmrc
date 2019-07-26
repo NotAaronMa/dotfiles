@@ -1,5 +1,6 @@
 #! /bin/sh
-
+#monitor setup
+xrandr --output DP2 --left-of eDP1
 #compton &
 export _JAVA_AWT_WM_NONREPARENTING=1
 ~/.config/bspwm/autostart.sh
@@ -7,6 +8,9 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 
 #create desktops
+for x in $(bspc query -M);
+do bspc monitor $x -d 1 2 3 q w e;
+done
 bspc monitor -d 1 2 3 q w e
 #gaps and borders
 bspc config border_width          2
