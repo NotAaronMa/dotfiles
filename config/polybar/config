@@ -322,7 +322,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/bat]
 type=custom/script
-exec = $HOME/.config/polybar/power.sh
+exec = batstatus
 tail = true
 interval = 90
 label = %output%

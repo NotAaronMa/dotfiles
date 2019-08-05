@@ -1,5 +1,4 @@
 sxhkd &
-ksuperkey &
-~/.config/polybar/launch.sh &
+polybarlaunch &
 feh --bg-center ~/Pictures/wallpapers/bg.png &
 dunst &

@@ -1,6 +1,7 @@
-if [ -z "$(bspc query -N -n focused.fullscreen)" ]; then                   
-	bspc node focused -t fullscreen;                                   
-else                                
-	
-	~/.config/sxhkd/state.sh                                
+if [ -z "$(bspc query -N -n focused.fullscreen)" ]; then 
+  echo "making tiled"
+  bspc node focused -t fullscreen
+else                      
+  echo "making fullscreen"
+  bspc node focused -t tiled
 fi

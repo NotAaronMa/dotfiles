@@ -5,9 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 #set environment vars
-export EDITOR="vim"
-export MYVIMRC="~/.config/vim/vimrc"
-export VIMINIT='source $MYVIMRC'
+export EDITOR="nvim"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CONFIG="$HOME/.config"
 # new alert text
@@ -24,14 +22,14 @@ alias grep="grep --color=auto"
 alias wget="wget -c"
 alias lspkg="comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)"
 alias arpscan='sudo arp-scan --interface=wlp3s0 --localnet'
-
+alias vim="nvim"
 
 #------------- Colors and shit --------------
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
-export PS1="\[\033[38;5;12m\][\[$(tput sgr0)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\]\[\033[38;5;12m\]@\[$(tput sgr0)\]\[\033[38;5;7m\]\h\[$(tput sgr0)\]\[\033[38;5;12m\]]\[$(tput sgr0)\]\[\033[38;5;15m\]: \[$(tput sgr0)\]\[\033[38;5;7m\]\w\[$(tput sgr0)\]\[\033[38;5;12m\]>\[$(tput sgr0)\]\[\033[38;5;10m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+export PS1=$(cat $HOME/.PS1)
 
 [ -e "/etc/DIR_COLORS" ] && DIR_COLORS="/etc/DIR_COLORS"
 [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
