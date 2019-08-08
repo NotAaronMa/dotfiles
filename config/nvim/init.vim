@@ -29,7 +29,7 @@ syntax on
 filetype plugin indent on
 set matchpairs+=<:>
 "spaces > tabs
-set tabstop=3 shiftwidth=2 expandtab
+set tabstop=3 shiftwidth=3 expandtab
 retab
 "line numbers
 set number

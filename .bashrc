@@ -27,7 +27,7 @@ alias vim="nvim"
 #------------- Colors and shit --------------
 
 # set PATH so it includes user's private bin directories
-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+PATH="$HOME/.local/bin:$PATH"
 
 export PS1=$(cat $HOME/.PS1)
 
