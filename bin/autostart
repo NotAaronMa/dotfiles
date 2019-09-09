@@ -1,4 +1,4 @@
-sxhkd &
-polybarlaunch &
+polybarlaunch
 feh --bg-center ~/Pictures/wallpapers/bg.png &
-dunst &
+sxhkd &
+ksuperkey -t 0 -d &

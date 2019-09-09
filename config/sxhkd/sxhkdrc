@@ -1,5 +1,5 @@
 #program hotkeys
-super + r
+alt+F1      
   rofi -show run
 control + alt + t
   urxvt -lsp 1
@@ -14,9 +14,11 @@ super + {h,j,k,l}
   bspc node $dir -n 'focused.!automatic' || \
   bspc node -n ${dir}.'!automatic' || \
   bspc node -s $dir
-
+#lock screen
+super + l 
+   scrlock.sh
 #resize windows
-control + r 
+super + r 
   bspc node @/ -R 90
 #set window state
 super + space
@@ -40,13 +42,14 @@ super + shift + {1,2,3,q,w,e}
   bspc node -d "focused:^{1,2,3,4,5,6}"
 #sound bullshit
 XF86AudioMute
-  amixer -c 1 set Master toggle
+  amixer set Master toggle 
 XF86AudioLowerVolume 
-  amixer -c 1 set Master 10%-
+  amixer set Master 10%-
 XF86AudioRaiseVolume
-  amixer -c 1 set Master 10%+
+  amixer set Master 10%+
 #brightness
 XF86MonBrightnessUp
   xbacklight -inc 10
 XF86MonBrightnessDown
   xbacklight -dec 10
+

@@ -20,11 +20,10 @@ margin-top = 0
 margin-bottom = 0
 
 [bar/mybar]
-
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = eDP1
 ;dimensions
 width = 100%
-height = 27
+height = 25
 offset-x = 0
 offset-y = 0
 radius = 0.0
@@ -324,12 +323,12 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type=custom/script
 exec = batstatus
 tail = true
-interval = 90
+interval = 15
 label = %output%
 format-prefix = "BAT:"
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #ffffa6 
-format =<label>%
+format =<label>
 
 [module/temperature]
 type = internal/temperature

@@ -1,12 +1,5 @@
 #! /bin/sh
-#monitor setup
-xrandr --output DP2 --left-of eDP1
 #compton &
-export _JAVA_AWT_WM_NONREPARENTING=1
-autostart 
-
-
-
 #create desktops
 for x in $(bspc query -M);
 do bspc monitor $x -d 1 2 3 q w e;
@@ -23,9 +16,10 @@ bspc config gapless_monocle       true
 bspc config focus_follows_pointer true
 bspc config focused_border_color '#9ef5b0'
 #window rules
+#bspc rule -a rofi focus=on
+#bspc rule -a rofi layer=above
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a Steam state=floating
-
-
+bspc rule -a 'Osu-lazer' manage=off
