@@ -10,6 +10,7 @@ call plug#end()
 runtime! archlinux.vim
 "fast scroll yeet
 set ttyfast
+
 "sexy ass statusbar
 set showtabline=2
 set laststatus=2
@@ -17,10 +18,10 @@ set display=lastline
 set noshowmode
 set noruler
 set noshowcmd
-
+"copy/paste from clip
 "autocomplete
 set wildmode=longest,list,full
-
+set clipboard+=unnamedplus
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "--------------Programming Stuff--------------
 "syntax
