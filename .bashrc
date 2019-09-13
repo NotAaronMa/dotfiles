@@ -11,7 +11,7 @@ export XDG_CONFIG="$HOME/.config"
 export VIMRUNTIME="$HOME/.local/share/nvim/runtime"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
-export RANGER_LOAD_DEFAULT_RC="TRUE"
+export RANGER_LOAD_DEFAULT_RC="FALSE"
 ALERT=${BWhite}${On_Red} # Bold White on red background
 
 

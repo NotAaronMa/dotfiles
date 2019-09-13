@@ -23,6 +23,7 @@ set noshowcmd
 set wildmode=longest,list,full
 set clipboard+=unnamedplus
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+retab
 "--------------Programming Stuff--------------
 "syntax
 filetype off

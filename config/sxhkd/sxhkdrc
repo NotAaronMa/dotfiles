@@ -14,9 +14,9 @@ super + {h,j,k,l}
   bspc node $dir -n 'focused.!automatic' || \
   bspc node -n ${dir}.'!automatic' || \
   bspc node -s $dir
-#lock screen
-super + l 
-   scrlock.sh
+#toggle desktop effects
+super + c 
+  effecttoggle 
 #resize windows
 super + r 
   bspc node @/ -R 90
