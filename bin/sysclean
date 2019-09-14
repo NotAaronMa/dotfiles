@@ -1,5 +1,5 @@
 sudo pacman -Rns $(pacman -Qdtq)
 sudo pacman -Sc
-sudo journalctl --vacuum-time=1d
+sudo journalctl --vacuum-time=0d
 sudo rm -R /home/aaron/.cache
 
