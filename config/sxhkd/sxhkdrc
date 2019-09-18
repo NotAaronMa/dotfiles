@@ -1,6 +1,6 @@
 #program hotkeys
 alt+F1      
-  rofi -show run
+  rofi -show drun
 control + alt + t
   urxvt -lsp 1
 #decrease window gaps

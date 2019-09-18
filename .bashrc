@@ -1,8 +1,4 @@
-#
-# ~/.bashrc
-#
-
-# If not running interactively, don't do anything
+##if not running interactively, don't do anything
 [[ $- != *i* ]] && return
 #set environment vars
 export EDITOR="nvim"
@@ -33,16 +29,13 @@ alias wget="wget -c"
 alias lspkg="comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)"
 alias arpscan='sudo arp-scan --interface=wlp3s0 --localnet'
 alias vim="nvim"
+alias sctl="systemctl"
 #mouse 
-
 function mouse {
    xinput --set-prop $1 "libinput Accel Speed" $2
 }
 
 
-function cpu {
-   sudo cpupower frequency-set -g $1
-}
 #------------- Colors and shit --------------
 
 # set PATH so it includes user's private bin directories

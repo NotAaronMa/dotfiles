@@ -1,5 +1,5 @@
 polybarlaunch
-feh --bg-fill ~/Pictures/wallpapers/bg.png &
+feh --bg-fill ~/Pictures/bg/bg.png &
 sxhkd &
 ksuperkey -t 0 -d &
 xcompmgr &

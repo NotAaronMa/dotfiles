@@ -1,9 +1,7 @@
 include-file=~/.config/polybar/modules
 [colors]
-;background = ${xrdb:color0:#222}
 background = #161616
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
@@ -54,4 +52,4 @@ tray-position = center
 tray-padding = 2
 modules-left = bspwm i3
 modules-center = mpd  
-modules-right = pulseaudio xbacklight temperature memory cpu bat wlan date
+modules-right = alsa xbacklight temperature memory cpu bat wlan date
