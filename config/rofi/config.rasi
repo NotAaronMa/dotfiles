@@ -1,5 +1,5 @@
 configuration {
-/*	modi: "window,run,ssh";*/
+modi: "window,run,ssh,drun";
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/
@@ -20,10 +20,10 @@ run-command: "{cmd}";
 /*	window-command: "xkill -id {window}";*/
 /*	window-match-fields: "all";*/
 /*	icon-theme: ;*/
-/*	drun-match-fields: "name,generic,exec,categories";*/
-/*	drun-show-actions: false;*/
-/*	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";*/
-/*	disable-history: false;*/
+drun-match-fields: "name,generic,exec,categories";
+drun-show-actions: true;
+drun-display-format: "{name} [<span weight='light' size='small'>({generic})</span>]";
+disable-history: true;
 /*	sort: false;*/
 /*	sorting-method: ;*/
 /*	case-sensitive: false;*/

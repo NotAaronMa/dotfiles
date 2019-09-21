@@ -9,14 +9,13 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export RANGER_LOAD_DEFAULT_RC="FALSE"
 ALERT=${BWhite}${On_Red} # Bold White on red background
-
+#run commands
+fc-cache
 
 #alias sudo to please for a more wholesome UNIX experience
 #alias please="sudo"
 #or alisas sudo to fucking for the opposite effect
 alias fucking="sudo"
-
-
 alias sctl="sudo systemctl"
 alias p="sudo pacman"
 alias dlmp3="youtube-dl --extract-audio --audio-format mp3"

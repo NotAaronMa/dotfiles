@@ -21,7 +21,7 @@ label-empty-padding = 2
 
 [module/mpd]
 type = internal/mpd
-format-online = <icon-prev> | <label-song> |  <icon-play><icon-pause> | <icon-next>
+format-online = <icon-prev> | <song-name> | <icon-next>
 host = 127.0.0.1
 port = 6600
 icon-prev = [<<]

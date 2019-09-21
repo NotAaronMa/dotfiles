@@ -47,6 +47,10 @@ XF86AudioLowerVolume
   amixer set Master 10%-
 XF86AudioRaiseVolume
   amixer set Master 10%+
+#music
+super + {Left,Right,Up,Down}
+   mpc -p 6600 {prev,next,play,pause}
+   urxvt
 #brightness
 XF86MonBrightnessUp
   xbacklight -inc 10
