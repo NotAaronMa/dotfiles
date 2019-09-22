@@ -24,8 +24,8 @@ drun-match-fields: "name,generic,exec,categories";
 drun-show-actions: true;
 drun-display-format: "{name} [<span weight='light' size='small'>({generic})</span>]";
 disable-history: true;
-/*	sort: false;*/
-/*	sorting-method: ;*/
+sort: true;
+/* sorting-method: match ; */
 /*	case-sensitive: false;*/
 /*	cycle: true;*/
 /*	sidebar-mode: false;*/

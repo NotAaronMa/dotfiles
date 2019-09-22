@@ -28,7 +28,9 @@ alias wget="wget -c"
 alias lspkg="comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)"
 alias arpscan='sudo arp-scan --interface=wlp3s0 --localnet'
 alias vim="nvim"
-alias sctl="systemctl"
+alias sctl="sudo systemctl"
+alias p="sudo pacman"
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 #mouse 
 function mouse {
    xinput --set-prop $1 "libinput Accel Speed" $2

@@ -53,3 +53,4 @@ tray-padding = 2
 modules-left = bspwm i3
 modules-center = mpd  
 modules-right = alsa xbacklight temperature memory cpu bat wlan date
+wm-restack = bspwm
