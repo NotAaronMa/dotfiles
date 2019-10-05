@@ -19,11 +19,8 @@ set noshowmode
 set noruler
 set noshowcmd
 "copy/paste from clip
+set clipboard = "+
 "autocomplete
-set wildmode=longest,list,full
-"doesn't fucking work nvim on 0.4.2 for some reason
-set clipboard+=unnamed
-let g:loaded_clipboard_provider='*'
 retab
 "--------------Programming Stuff--------------
 "syntax

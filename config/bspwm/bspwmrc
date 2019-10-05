@@ -2,9 +2,9 @@
 #compton &
 #create desktops
 for x in $(bspc query -M);
-do bspc monitor $x -d 1 2 3 q w e;
+do bspc monitor $x -d 1 2 3;
 done
-bspc monitor -d 1 2 3 q w e
+bspc monitor -d 1 2 3
 #gaps and borders
 bspc config border_width          1
 bspc config window_gap            10

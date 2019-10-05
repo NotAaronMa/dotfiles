@@ -1,20 +1,31 @@
 ##if not running interactively, don't do anything
 [[ $- != *i* ]] && return
-#set environment vars
+ 
+export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 export EDITOR="nvim"
+export TERMINAL="rxvt-unicode"
+export BROWSER="firefox"
+export READER="zathura"
+export FILE="ranger"
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CONFIG="$HOME/.config"
 export VIMRUNTIME="$HOME/.local/share/nvim/runtime"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export RANGER_LOAD_DEFAULT_RC="FALSE"
-ALERT=${BWhite}${On_Red} # Bold White on red background
-#run commands
-fc-cache
 
-#alias sudo to please for a more wholesome UNIX experience
-#alias please="sudo"
-#or alisas sudo to fucking for the opposite effect
+
+# less/man colors
+export LESS=-R
+export LESS_TERMCAP_mb="$(printf '%b' '')"; a="${a%_}"
+export LESS_TERMCAP_md="$(printf '%b' '')"; a="${a%_}"
+export LESS_TERMCAP_me="$(printf '%b' '')"; a="${a%_}"
+export LESS_TERMCAP_so="$(printf '%b' '')"; a="${a%_}"
+export LESS_TERMCAP_se="$(printf '%b' '')"; a="${a%_}"
+export LESS_TERMCAP_us="$(printf '%b' '')"; a="${a%_}"
+export LESS_TERMCAP_ue="$(printf '%b' '')"; a="${a%_}"
+
 alias fucking="sudo"
 alias sctl="sudo systemctl"
 alias p="sudo pacman"
@@ -30,12 +41,15 @@ alias arpscan='sudo arp-scan --interface=wlp3s0 --localnet'
 alias vim="nvim"
 alias sctl="sudo systemctl"
 alias p="sudo pacman"
-alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias ranger='ranger --choosedir=$HOME/.local/share/rangerdir; LASTDIR=`cat $HOME/.local/share/rangerdir`; cd "$LASTDIR"'
 #mouse 
 function mouse {
    xinput --set-prop $1 "libinput Accel Speed" $2
 }
-
+#get shell code from elf file for ctfs and shit
+function gsc {
+   for i in $(objdump -d $1 |grep "^ " |cut -f2); do echo -n '\x'$i; done; echo 
+}
 
 #------------- Colors and shit --------------
 

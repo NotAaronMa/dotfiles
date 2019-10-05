@@ -1,8 +1,8 @@
 * {
     text-color:                  #dfdfdf;
-    background-color:            #16161650;
-    background-clear:            #16161600;
-    background-solid:            #161616;
+    background-color:            #000000af;
+    background-clear:            #00000000;
+    background-solid:            #00000000;
     lightbg:                     #534c48;
     red:                         #f15d22;
     orange:                      #faa41a; 
@@ -33,35 +33,41 @@
 #window {
     border:     0;
     text-color: @foreground;
-    background-color: rgba ( 0, 0, 0, 0 % );
+    background-color: @background-color;
     padding:    5;
     text-color: @bordercolor;
-    background-color: @clear;
 }
 #mainbox {
+    background-color: @background-clear;
     border:  0;
     padding: 0;
 }
-#message {
+#message { 
+    background-color: @background-clear;
     border:     1px dash 0px 0px ;
     text-color: @separatorcolor;
     padding:    2px 0px 0px ;
 }
 #textbox {
+    background-color: @background-clear;
     text-color: @foreground;
 }
+
+
 #listview {
     fixed-height: 0;
     border:       2px 0px 0px ;
     padding:      2px 0px 0px ;
     text-color: @separatorcolor;
+    background-color: @background-clear;
 }
 #element {
-    border: 0;
+    border: 0; 
+    background-color: @background-clear;
 }
 #element.normal.normal {
     text-color: @normal-foreground;
-    background-color: @normal-background;
+    background-color: @background-clear;
 }
 #element.normal.urgent {
     text-color: @urgent-foreground;
@@ -102,18 +108,20 @@
     text-color: @selected-normal-foreground;
     background-color: @selected-normal-background;
 }
+
 #inputbar {
     spacing: 0;
     border: 0px ;
+    children:   [entry];
+    background-color: @selected-normal-background;
 }
-#button normal {
+
+#button normal { 
     text-color: @foreground;
 }
 
-#inputbar {
-    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
-}
-#textbox-prompt-colon {
+
+#textbox-prompt-colon { 
     expand:     false;
     str:        ":";
     margin:     0px 0.3em 0em 0em ;
