@@ -6,7 +6,7 @@ export EDITOR="nvim"
 export TERMINAL="rxvt-unicode"
 export BROWSER="firefox"
 export READER="zathura"
-export FILE="ranger"
+export FILE="$TERMINAL -e ranger"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CONFIG="$HOME/.config"
@@ -14,17 +14,7 @@ export VIMRUNTIME="$HOME/.local/share/nvim/runtime"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export RANGER_LOAD_DEFAULT_RC="FALSE"
-
-
-# less/man colors
-export LESS=-R
-export LESS_TERMCAP_mb="$(printf '%b' '')"; a="${a%_}"
-export LESS_TERMCAP_md="$(printf '%b' '')"; a="${a%_}"
-export LESS_TERMCAP_me="$(printf '%b' '')"; a="${a%_}"
-export LESS_TERMCAP_so="$(printf '%b' '')"; a="${a%_}"
-export LESS_TERMCAP_se="$(printf '%b' '')"; a="${a%_}"
-export LESS_TERMCAP_us="$(printf '%b' '')"; a="${a%_}"
-export LESS_TERMCAP_ue="$(printf '%b' '')"; a="${a%_}"
+export PS1=$(cat $HOME/.PS1)
 
 alias fucking="sudo"
 alias sctl="sudo systemctl"
@@ -54,8 +44,6 @@ function gsc {
 #------------- Colors and shit --------------
 
 # set PATH so it includes user's private bin directories
-PATH="$PATH:$HOME/.local/bin"
-export PS1=$(cat $HOME/.PS1)
 
 [ -e "/etc/DIR_COLORS" ] && DIR_COLORS="/etc/DIR_COLORS"
 [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
