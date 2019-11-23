@@ -1,16 +1,16 @@
 ##if not running interactively, don't do anything
 [[ $- != *i* ]] && return
- 
+export GOPATH="$HOME/.local/share/go"
+export GOBIN="$HOME/.local/share/go/bin"
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 export EDITOR="nvim"
-export TERMINAL="rxvt-unicode"
+export TERMINAL="urxvt"
 export BROWSER="firefox"
 export READER="zathura"
 export FILE="$TERMINAL -e ranger"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CONFIG="$HOME/.config"
-export VIMRUNTIME="$HOME/.local/share/nvim/runtime"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export RANGER_LOAD_DEFAULT_RC="FALSE"
@@ -29,9 +29,11 @@ alias wget="wget -c"
 alias lspkg="comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)"
 alias arpscan='sudo arp-scan --interface=wlp3s0 --localnet'
 alias vim="nvim"
+alias arp="ip n"
 alias sctl="sudo systemctl"
 alias p="sudo pacman"
 alias ranger='ranger --choosedir=$HOME/.local/share/rangerdir; LASTDIR=`cat $HOME/.local/share/rangerdir`; cd "$LASTDIR"'
+
 #mouse 
 function mouse {
    xinput --set-prop $1 "libinput Accel Speed" $2

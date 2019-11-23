@@ -1,8 +1,7 @@
-#program hotkeys
-alt+F1      
-  rofi -show drun
+alt + F1
+  rofi -show drun &
 control + alt + t
-  urxvt -lsp 1
+  urxvt &
 #decrease window gaps
 super + minus
   ~/.config/sxhkd/gaps.sh 10

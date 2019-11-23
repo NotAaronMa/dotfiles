@@ -2,7 +2,7 @@
 urxvt.termname: rxvt-unicode
 urxvt.shell: /bin/bash
 urxvt.opacity: 60
-urxvt.font:  xft:InconsolataGo\ Nerd\ Font:pixelsize=13:antialias=true:autohint=true;
+urxvt.font:  xft:Inconsolata:pixelsize=13:antialias=true:autohint=true;
 urxvt.boldFont: xft:mono:pixelsize=13:weight=bold
 urxvt.scrollBar: false
 urxvt.cursorUnderline: true
