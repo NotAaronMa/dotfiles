@@ -1,7 +1,7 @@
 alt + F1
   rofi -show drun &
 control + alt + t
-  urxvt &
+  $TERMINAL &
 #decrease window gaps
 super + minus
   ~/.config/sxhkd/gaps.sh 10

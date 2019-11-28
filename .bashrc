@@ -4,7 +4,7 @@ export GOPATH="$HOME/.local/share/go"
 export GOBIN="$HOME/.local/share/go/bin"
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 export EDITOR="nvim"
-export TERMINAL="urxvt"
+export TERMINAL="st"
 export BROWSER="firefox"
 export READER="zathura"
 export FILE="$TERMINAL -e ranger"
@@ -27,8 +27,6 @@ alias ll="ls -lisa --color=auto"
 alias grep="grep --color=auto"
 alias wget="wget -c"
 alias lspkg="comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)"
-alias arpscan='sudo arp-scan --interface=wlp3s0 --localnet'
-alias vim="nvim"
 alias arp="ip n"
 alias sctl="sudo systemctl"
 alias p="sudo pacman"
@@ -52,26 +50,3 @@ function gsc {
 [ -e "$DIR_COLORS" ] || DIR_COLORS=""
 eval "`dircolors -b $DIR_COLORS`"
 
-#tty colors
-if [ "$TERM" = "linux" ]; then
-  /bin/echo -e "
-  \e]P0151515
-  \e]P1fb9fb1
-  \e]P25ef550
-  \e]P3ddb26f
-  \e]P46fc2ef
-  \e]P5e1a3ee
-  \e]P612cfc0
-  \e]P7d0d0d0
-  \e]P8505050
-  \e]P9fb9fb1
-  \e]PA5ef550
-  \e]PBddb26f
-  \e]PC6fc2ef
-  \e]PDe1a3ee
-  \e]PE12cfc0
-  \e]PFf5f5f5
-  "
-  # get rid of artifacts
-  clear
-fi

@@ -21,3 +21,5 @@ bspc rule -a Screenkey manage=off
 bspc rule -a Steam state=floating
 bspc rule -a plasmashell state=floating manage=off layer=normal
 bspc rule -a Plasma state=floating manage=off layer=normal
+autostart 
+/home/aaron/.fehbg &
