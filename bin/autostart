@@ -1,5 +1,4 @@
-polybarlaunch
-feh --bg-fill ~/Pictures/bg/bg.png &
+~/.fehbg
 sxhkd &
 ksuperkey -t 0 -d &
 xcompmgr &

@@ -6,5 +6,6 @@ load xresources file
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 #disable fucking mouse acceleration
 xset m 0 0
+xset r rate 200 30
 xinput --set-prop 12 306 Disabled
 exec bspwm

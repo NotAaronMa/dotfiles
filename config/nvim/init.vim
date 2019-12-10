@@ -1,4 +1,3 @@
-set nocompatible
 "-------------- Load Plugins --------------
 
 call plug#begin('~/.local/share/nvim/plugged')
@@ -10,7 +9,6 @@ call plug#end()
 runtime! archlinux.vim
 "fast scroll yeet
 set ttyfast
-
 "sexy ass statusbar
 set showtabline=2
 set laststatus=2
@@ -19,7 +17,7 @@ set noshowmode
 set noruler
 set noshowcmd
 "copy/paste from clip
-set clipboard = "+
+set clipboard=unnamedplus
 "autocomplete
 retab
 "--------------Programming Stuff--------------
@@ -32,6 +30,6 @@ set matchpairs+=<:>
 set tabstop=3 shiftwidth=3 expandtab autoindent
 retab
 "line numbers
-set number
+set relativenumber
 set numberwidth=3
 

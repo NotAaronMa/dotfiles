@@ -1,0 +1,40 @@
+command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
+#my shit
+alias \
+   sctl="sudo systemctl" \
+   p="sudo pacman" \
+   dlmp3="youtube-dl --extract-audio --audio-format mp3" \
+   cd..="cd .." \
+   lspkg="comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)" \
+   ranger='ranger --choosedir=$HOME/.local/share/rangerdir; LASTDIR=`cat $HOME/.local/share/rangerdir`; cd "$LASTDIR"'
+
+#colors
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+   ll="ls -lisa" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi"
+
+#deverbosify
+alias \
+	ka="killall" \
+	g="git" \
+	trem="transmission-remote" \
+	YT="youtube-viewer" \
+	sdn="sudo shutdown -h now" \
+	f="$FILE" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	p="sudo pacman"
+
+#some cool shit
+alias \
+	bat="cat /sys/class/power_supply/BAT?/capacity" \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -v" \
+	mkd="mkdir -pv" \
+	yt="youtube-dl --add-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+	ffmpeg="ffmpeg -hide_banner"
