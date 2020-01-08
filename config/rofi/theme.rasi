@@ -1,89 +1,108 @@
+/*
+ * Customdark rofi theme
+ * Author: tommiiit
+ * User: tommiiit
+*/
+
+
 * {
-    text-color:                  #dfdfdf;
-    background-color:            #000000af;
-    background-clear:            #00000000;
-    lightbg:                     #534c48;
-    red:                         #f15d22;
-    orange:                      #faa41a; 
-    blue:                        #6fc2ef; 
-
-    selected-normal-foreground:  #161616;
-    normal-foreground:           @foreground;
-    alternate-normal-background: @background-clear;
-    selected-urgent-foreground:  @foreground;
-    urgent-foreground:           @foreground;
-    alternate-urgent-background: @background-clear;
-    active-foreground:           @foreground;
-    selected-active-foreground:  @foreground;
-    alternate-normal-foreground: @foreground;
-    alternate-active-background: @blue;
-    bordercolor:                 @foreground;
-    normal-background:           @background-clear;
-    selected-normal-background:  #dfdfdf;
-    separatorcolor:              @orange;
-    spacing:                     2;
-    urgent-background:           @red;
-    alternate-urgent-foreground: @foreground;
-    selected-urgent-background:  @red;
-    alternate-active-foreground: @foreground;
-    selected-active-background:  @blue;
-    active-background:           @orange;
-}
-#window {
-    border:     0;
-    text-color: @foreground;
-    background-color: @background-color;
-    padding:    5;
-    text-color: @bordercolor;
-    transparency: "real";
-}
-#mainbox {
-    background-color: @background-clear;
-    border:  0;
-    padding: 0;
-}
-#message { 
-    background-color: @background-clear;
-    border:     1px dash 0px 0px ;
-    text-color: @separatorcolor;
-    padding:    2px 0px 0px ;
-}
-#textbox {
-    background-color: @background-clear;
-    text-color: @foreground;
-}
-#listview {
-    fixed-height: 0;
-    border:       2px 0px 0px ;
-    padding:      2px 0px 0px ;
-    text-color: @separatorcolor;
-    background-color: @background-clear;
-}
-#element {
-    border: 0; 
-    background-color: @background-clear;
-}
-#element.normal.normal {
-    text-color: @normal-foreground;
-    background-color: @background-clear;
+  black:      #000000;
+  red:        #ff0000;
+  green:      #00ff00;
+  yellow:     #ffff00;
+  blue:       #00cfff;
+  mangenta:   #ff4dff;
+  cyan:       #00ffff;
+  emphasis:   #50536b;
+  text:       #ffffff;
+  fg:         #bfcbb3;
+  bg:         #282c34;
+  secbg:      #0f0f0f;
+  trans:      #00000000;
+  spacing: 0;
+  background-color: #0000001A;
+  font: "DejaVu Sans 11";
+  text-color: @text;
 }
 
-#element.selected.normal {
-    text-color: @selected-normal-foreground;
-    background-color: @selected-normal-background;
+window {
+  fullscreen: false;
+  background-color: @black;
+  width: 960px;
+  height: 540;
+  border-radius: 10px;
 }
 
-
-#button selected {
-    text-color: @selected-normal-foreground;
-    background-color: @selected-normal-background;
+mainbox {
+  padding: 10px 10px;
 }
 
-#inputbar {
-    spacing: 0;
-    border: 0px ;
-    children:   [entry];
-    background-color: #00000000;
-    text-color: @foreground;
+inputbar {
+  padding: 7px;
+  background-color: @trans;
+  border-radius: 10px;
+  margin: 17px 0px;
+  children: [prompt, textbox-prompt-colon, entry, case-indicator];
 }
 
+prompt {
+  background-color: @trans;
+  text-color: @text;
+}
+
+textbox-prompt-colon {
+  background-color: @trans;
+  expand: false;
+  str: " ";
+  text-color: @text;
+}
+
+entry {
+  background-color: @trans;
+}
+
+case-indicator {
+  background-color: @trans;
+}
+
+listview {
+  spacing: 5px;
+  dynamic: true;
+  scrollbar: false;
+  background-color: @trans;
+}
+
+element {
+  padding: 5px;
+  text-color: @text;
+  border-radius: 4px;
+  background-color: @trans;
+}
+
+element selected {
+  background-color: @cyan;
+  text-color: @black;
+}
+
+element urgent, element selected urgent {
+  text-color: @red;
+}
+
+element active, element selected active {
+  text-color: @purple;
+}
+
+message {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+  border: 1px;
+  border-color: @cyan;
+}
+/*
+button selected {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+}
+*/

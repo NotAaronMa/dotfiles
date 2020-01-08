@@ -4,5 +4,5 @@ if pgrep xcompmgr &>/dev/null; then
     pkill xcompmgr &
 else
     echo "Turning on desktop effects"
-    xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
+    xcompmgr &
 fi

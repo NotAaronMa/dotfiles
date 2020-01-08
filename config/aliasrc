@@ -20,9 +20,10 @@ alias \
 alias \
 	ka="killall" \
 	g="git" \
-	trem="transmission-remote" \
-	YT="youtube-viewer" \
-	sdn="sudo shutdown -h now" \
+   gcl="git clone" \
+   gcm="git commit" \
+   ga="git add -A" \
+   gp="git pull" \
 	f="$FILE" \
 	e="$EDITOR" \
 	v="$EDITOR" \
