@@ -29,8 +29,10 @@ alt + {h,j,k,l}
   bspc node -f {west,south,north,east}
 #kill process
 #resize window
-super + shift + {h,j,k,l}
-   ~/.config/sxhkd/bspresize.sh exp {west,south,north,east} -10
+alt + shift + {h,j,k,l}
+   ~/.config/sxhkd/bspresize.sh con {west,south,north,east} 10
+   ~/.config/sxhkd/bspresize.sh exp {west,south,north,east} 10
+
 #close windows
 super + x
   bspc node -c
