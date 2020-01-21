@@ -1,8 +1,8 @@
 "-------------- Load Plugins --------------
 
-call plug#begin('~/.local/share/nvim/plugged')
-Plug 'itchyny/lightline.vim'
-call plug#end()
+"call plug#begin('~/.local/share/nvim/plugged')
+"Plug 'itchyny/lightline.vim'
+"call plug#end()
 
 "--------------Basic Settings--------------
 "set runtime so packages work
