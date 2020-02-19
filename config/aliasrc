@@ -2,7 +2,9 @@ command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
 #my shit
 alias \
    sctl="sudo systemctl" \
-   p="sudo pacman" \
+   xi="sudo xbps-install" \
+   xr="sudo xbps-remove" \
+   xq="xbps-query" \
    dlmp3="youtube-dl --extract-audio --audio-format mp3" \
    cd..="cd .." \
    lspkg="comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)" \

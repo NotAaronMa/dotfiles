@@ -13,7 +13,7 @@ set ttyfast
 set showtabline=2
 set laststatus=2
 set display=lastline
-set noshowmode
+"set noshowmode
 set noruler
 set noshowcmd
 "copy/paste from clip

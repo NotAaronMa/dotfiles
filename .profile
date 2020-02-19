@@ -2,6 +2,7 @@ source /home/aaron/.bashrc
 #enviroment variables
 export HOME="/home/aaron/"
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
+#export XDG_DATA_DIRS=".local/share/applications"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CONFIG="$HOME/.config"
 export PS1="$(<$HOME/.PS1)"

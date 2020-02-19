@@ -1,9 +1,10 @@
+cd
 #ctrl-alt-backspace
 setxkbmap -option terminate:ctrl_alt_bksp &
 #xrandr
-mon1
+mon1.sh
 load xresources file
-[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+xrdb -merge ~/.Xresources
 #disable fucking mouse acceleration
 xset m 0 0
 xset r rate 200 30

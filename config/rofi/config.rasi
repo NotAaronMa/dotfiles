@@ -97,4 +97,4 @@ kb-cancel: "Escape,Control+g,Control+bracketleft";
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
-@import "theme.rasi"
+@import "/usr/share/rofi/themes/lb.rasi"
