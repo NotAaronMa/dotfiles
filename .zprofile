@@ -1,18 +1,18 @@
-source /home/aaron/.bashrc
 #enviroment variables
 export HOME="/home/aaron/"
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
-#export XDG_DATA_DIRS=".local/share/applications"
+export XDG_DATA_DIRS="/usr/share:/usr/local/share:$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CONFIG="$HOME/.config"
-export PS1="$(<$HOME/.PS1)"
+export ZDOTDIR="$HOME/.config/zsh/"
 
 #default apps
 export EDITOR="nvim"
-export TERMINAL="st"
+export TERMINAL="alacritty"
 export BROWSER="firefox"
 export READER="zathura"
 export FILE="$TERMINAL -e ranger"
+export OPENER="xdg-open"
 
 #environment settings
 export _JAVA_AWT_WM_NONREPARENTING=1

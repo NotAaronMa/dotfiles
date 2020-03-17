@@ -1,13 +1,13 @@
 command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
 #my shit
+
 alias \
-   sctl="sudo systemctl" \
    xi="sudo xbps-install" \
    xr="sudo xbps-remove" \
    xq="xbps-query" \
+   nc="ncat" \
    dlmp3="youtube-dl --extract-audio --audio-format mp3" \
    cd..="cd .." \
-   lspkg="comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)" \
    ranger='ranger --choosedir=$HOME/.local/share/rangerdir; LASTDIR=`cat $HOME/.local/share/rangerdir`; cd "$LASTDIR"'
 
 #colors
@@ -29,7 +29,6 @@ alias \
 	f="$FILE" \
 	e="$EDITOR" \
 	v="$EDITOR" \
-	p="sudo pacman"
 
 #some cool shit
 alias \

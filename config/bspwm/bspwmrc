@@ -2,6 +2,7 @@
 for x in $(bspc query -M); do 
 bspc monitor $x -d 1 2 3;
 bspc config border_radius 10
+bspc config automatic_scheme alternate
 done
 #gaps and borders
 bspc config border_width          2
