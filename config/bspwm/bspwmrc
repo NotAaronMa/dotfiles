@@ -1,0 +1,22 @@
+#! /bin/sh
+for x in $(bspc query -M); do 
+bspc monitor $x -d 1 2 3;
+bspc config border_radius 10
+bspc config automatic_scheme alternate
+done
+#gaps and borders
+bspc config border_width          2
+bspc config window_gap            10
+#tiling bullshit
+bspc config split_ratio           0.52
+bspc config borderless_monocle    true
+bspc config gapless_monocle       true
+#general config
+bspc config focus_follows_pointer true
+bspc config focused_border_color '#aaaaaa'
+
+#window rules
+#bspc rule -a rofi focus=on
+#bspc rule -a rofi layer=above
+~/.config/bspwm/rules.sh 
+autostart.sh 

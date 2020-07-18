@@ -1,0 +1,57 @@
+alt + F1
+  noswallow_rofi -show drun &
+control + alt + t
+  $TERMINAL &
+#decrease window gaps
+super + minus
+  ~/.config/sxhkd/gaps.sh 10
+super + equal
+  ~/.config/sxhkd/gaps.sh -10
+#move windows
+super + {h,j,k,l}
+  dir={west,south,north,east}; \
+  bspc node $dir -n 'focused.!automatic' || \
+  bspc node -n ${dir}.'!automatic' || \
+  bspc node -s $dir
+#toggle desktop effects
+super + c 
+   dftoggle.sh
+#resize windows
+super + r 
+  bspc node @/ -R 90
+#set window state
+super + space
+  ~/.config/sxhkd/state.sh
+F11
+   ~/.config/sxhkd/full.sh
+#change focus
+alt + {h,j,k,l}
+  bspc node -f {west,south,north,east}
+
+#close windows
+super + x
+  bspc node -c
+#go to desktop
+super + {1,2,3}
+  bspc desktop -f 'focused:^{1,2,3}.!focused' 
+#give to desktop
+super + shift + {1,2,3,q,w,e}
+  bspc node -d "focused:^{1,2,3}"
+#sound bullshit
+XF86AudioMute
+  amixer set Master toggle 
+XF86AudioLowerVolume 
+  amixer set Master 10%-
+XF86AudioRaiseVolume
+  amixer set Master 10%+
+#music
+super + {Left,Right,Up,Down}
+   mpc -p 6600 {prev,next,play,pause}
+   urxvt
+#brightness
+XF86MonBrightnessUp
+  xbacklight -inc 10
+XF86MonBrightnessDown
+  xbacklight -dec 10
+Print
+   scrot -e 'mv $f ~/Pictures/Screenshots/'
